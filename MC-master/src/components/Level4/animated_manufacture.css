@@ -1,0 +1,13 @@
+.cls-1 {
+  fill: #fff6d8;
+}
+.cls-2 {
+  fill: #fc9529;
+}
+.glow-white {
+  text-shadow:
+    0 0 8px #fff,
+    0 0 16px #fff,
+    0 0 24px #fff,
+    0 0 32px #fff;
+}

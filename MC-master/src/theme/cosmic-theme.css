@@ -1,0 +1,62 @@
+/* src/theme/cosmic-theme.css */
+
+:root {
+  /* Gradients */
+  --cosmic-bg-gradient: linear-gradient(to bottom, #312e81, #6d28d9, #3730a3);
+  --cosmic-planet-gradient: linear-gradient(to bottom right, #22d3ee, #2563eb);
+  --cosmic-celestial-gradient: linear-gradient(to bottom right, #a78bfa, #ec4899);
+
+  /* Back Button */
+  --cosmic-back-btn-bg: #5f00b6;
+  --cosmic-back-btn-bg-hover: #7c3aed;
+  --cosmic-back-btn-text: #fff;
+  --cosmic-back-btn-glow1: #a78bfa;
+  --cosmic-back-btn-glow2: #7c3aed;
+  --cosmic-back-btn-shadow: rgba(95,0,182,0.10);
+
+  /* Stars & Particles */
+  --cosmic-star: #fff;
+  --cosmic-particle: #67e8f9;
+
+  /* Text */
+  --cosmic-text-main: #fff;
+  --cosmic-text-accent: #67e8f9;
+  --cosmic-text-shadow: #0008;
+  --cosmic-text-accent-shadow: #0006;
+
+  /* SVG Curves */
+  --cosmic-svg-curve: #fff;
+  --cosmic-svg-curve-opacity: 0.5;
+
+  /* Scroll Buttons */
+  --cosmic-scroll-btn-bg: rgba(255,255,255,0.2);
+  --cosmic-scroll-btn-bg-hover: rgba(255,255,255,0.3);
+  --cosmic-scroll-btn-border: 1px solid rgba(255,255,255,0.3);
+  --cosmic-scroll-btn-icon: #fff;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(-100px) rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 8px var(--cosmic-back-btn-glow1), 0 0 4px var(--cosmic-back-btn-glow2), 0 1px 4px var(--cosmic-back-btn-shadow);
+  }
+  to {
+    box-shadow: 0 0 16px var(--cosmic-back-btn-glow2), 0 0 12px var(--cosmic-back-btn-glow1), 0 1px 4px var(--cosmic-back-btn-shadow);
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
