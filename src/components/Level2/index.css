@@ -1,0 +1,698 @@
+
+.text-mobile1 {
+  font-size: 8px;
+}
+.text-mobile2 {
+  font-size: 10px;
+}
+/* Pixel Perfect Base */
+.pixel-perfect {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Pixel Art Font */
+.pixel-text {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  text-rendering: optimizeSpeed;
+  letter-spacing: 0.05em;
+}
+
+/* Pixel Borders */
+.pixel-border {
+  border: 2px solid;
+  border-image: 
+    linear-gradient(45deg, 
+      transparent 0%, transparent 25%, 
+      currentColor 25%, currentColor 75%, 
+      transparent 75%, transparent 100%
+    ) 2;
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.pixel-border1 {
+  border: 2px solid;
+  border-image: 
+    linear-gradient(45deg, 
+      transparent 0%, transparent 25%, 
+      currentColor 25%, currentColor 75%, 
+      transparent 75%, transparent 100%
+    ) 2;
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pixel-border-thick {
+  border: 4px solid;
+  border-image: 
+    linear-gradient(45deg, 
+      transparent 0%, transparent 20%, 
+      currentColor 20%, currentColor 80%, 
+      transparent 80%, transparent 100%
+    ) 4;
+  box-shadow: 
+    inset 0 0 0 2px rgba(255, 255, 255, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Pixel Dots */
+.pixel-dot {
+  border-radius: 0;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Pixel Particles */
+.pixel-particle {
+  border-radius: 0;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pixel Corner */
+.pixel-corner {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+/* Grid Pattern Background */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Pixel Pattern Background */
+.bg-pixel-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+}
+
+/* Scan Lines Effect */
+.bg-scan-lines {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    );
+}
+
+/* Game Zone States */
+.game-zone-idle {
+  transition: all 0.3s ease;
+}
+
+.game-zone-active {
+  box-shadow: 
+    0 0 30px rgba(0, 255, 255, 0.7),
+    inset 0 0 30px rgba(0, 255, 255, 0.3);
+  animation: zone-pulse 1s ease-in-out infinite;
+}
+
+.game-zone-success {
+  box-shadow: 
+    0 0 40px rgba(0, 255, 0, 0.8),
+    inset 0 0 40px rgba(0, 255, 0, 0.4);
+  animation: zone-success 0.6s ease-out;
+}
+
+/* Game Item States */
+.game-item-idle {
+  transition: all 0.3s ease;
+}
+
+.game-item-dragging {
+  z-index: 1000;
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(0, 255, 255, 0.8);
+  animation: item-drag 0.3s ease-out;
+}
+
+.game-item-success {
+  animation: item-success 0.8s ease-out;
+}
+
+.game-item-error {
+  animation: item-error 0.6s ease-out;
+}
+
+/* Pixel Glow Effect */
+.pixel-glow {
+  filter: 
+    drop-shadow(0 0 2px currentColor)
+    drop-shadow(0 0 4px currentColor)
+    drop-shadow(0 0 8px currentColor);
+}
+
+/* Pixel Fill Animation */
+.pixel-fill {
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(255, 255, 255, 0.1) 2px,
+      rgba(255, 255, 255, 0.1) 4px
+    );
+}
+
+/* Game Card Hover Effect */
+.game-card-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Ultra-simple touch manipulation for easy mobile drag and drop */
+.touch-manipulation {
+  /* Essential touch settings */
+  touch-action: none !important;
+  -webkit-touch-action: none !important;
+  -ms-touch-action: none !important;
+
+  /* Prevent text selection */
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+
+  /* Remove tap highlights */
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-drag: none !important;
+
+  /* Hardware acceleration */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+
+  /* Cursor */
+  cursor: grab;
+}
+
+/* Ultra-simple mobile touch targets for easy dragging */
+@media (max-width: 768px) {
+  .touch-manipulation {
+    min-height: 44px !important; /* Smaller touch target for mobile */
+    min-width: 44px !important;
+    padding: 6px !important; /* Minimal padding for mobile */
+    /* Force touch handling */
+    touch-action: none !important;
+  }
+
+  /* Strong visual feedback on touch */
+  .touch-manipulation:active {
+    transform: scale(1.15) translateZ(0) !important;
+    transition: transform 0.05s ease-out !important;
+    opacity: 0.9 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+  }
+
+  /* Make dragging items super visible on mobile */
+  .game-item-dragging {
+    z-index: 9999 !important;
+    transform: scale(1.2) translateZ(0) !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7) !important;
+    opacity: 0.95 !important;
+    border: 4px solid #00ffff !important;
+  }
+
+  /* Very obvious drag zones for mobile */
+  .game-zone-active {
+    border: 5px solid #00ffff !important;
+    background: rgba(0, 255, 255, 0.25) !important;
+    box-shadow: inset 0 0 30px rgba(0, 255, 255, 0.5) !important;
+    transform: scale(1.02) !important;
+  }
+}
+
+/* Mobile drag overlay enhancements */
+.mobile-drag-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+  pointer-events: none;
+  animation: mobile-drag-pulse 1s ease-in-out infinite;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Keyframe Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes zone-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 30px rgba(0, 255, 255, 0.7),
+      inset 0 0 30px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(0, 255, 255, 1),
+      inset 0 0 40px rgba(0, 255, 255, 0.5);
+  }
+}
+
+@keyframes zone-success {
+  0% {
+    transform: scale(1);
+    box-shadow: 
+      0 0 40px rgba(0, 255, 0, 0.8),
+      inset 0 0 40px rgba(0, 255, 0, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 
+      0 0 50px rgba(0, 255, 0, 1),
+      inset 0 0 50px rgba(0, 255, 0, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 
+      0 0 30px rgba(0, 255, 0, 0.6),
+      inset 0 0 30px rgba(0, 255, 0, 0.3);
+  }
+}
+
+@keyframes item-drag {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(2deg) scale(1.1);
+  }
+}
+
+@keyframes item-success {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+@keyframes item-error {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-3px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes mobile-drag-pulse {
+  0%, 100% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* Mobile drag feedback animations */
+@keyframes mobile-touch-ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes mobile-drag-trail {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+/* Enhanced mobile drag indicator */
+@keyframes mobile-drag-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+  }
+}
+
+/* Utility Classes */
+.animate-slideIn {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-mobile-drag-pulse {
+  animation: mobile-drag-pulse 1s ease-in-out infinite;
+}
+
+.animate-mobile-touch-ripple {
+  animation: mobile-touch-ripple 0.6s ease-out;
+}
+
+.animate-mobile-drag-trail {
+  animation: mobile-drag-trail 0.8s ease-out infinite;
+}
+
+.animate-mobile-drag-glow {
+  animation: mobile-drag-glow 1.5s ease-in-out infinite;
+}
+
+/* Custom Scrollbar - Pixel Style */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2563eb, #7c3aed);
+}
+
+/* High DPI Display Adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .pixel-perfect {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Mobile Landscape Optimizations */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  /* Ensure full height usage on mobile landscape */
+  html, body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Optimize spacing for landscape */
+  .space-y-1 > * + * {
+    margin-top: 0.25rem;
+  }
+  
+  .space-y-2 > * + * {
+    margin-top: 0.5rem;
+  }
+  
+  .space-y-3 > * + * {
+    margin-top: 0.75rem;
+  }
+  
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  
+  /* Compact text for landscape */
+  .pixel-text {
+    font-size: 0.9em;
+    letter-spacing: 0.02em;
+  }
+  
+  /* Better touch targets for landscape */
+  .pixel-border, .pixel-border-thick {
+    border-width: 2px;
+  }
+  
+  /* Optimize card layouts for landscape */
+  .game-card-hover {
+    transition: transform 0.2s ease;
+  }
+  
+  .game-card-hover:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Enhanced mobile touch and drag handling */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  
+  /* Enhanced mobile touch targets */
+  .pixel-border, .pixel-border-thick {
+    border-width: 3px;
+  }
+  
+  /* Better spacing for mobile */
+  .space-y-3 > * + * {
+    margin-top: 0.75rem;
+  }
+
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+
+  /* Reduced padding for mobile */
+  .p-2 {
+    padding: 0.25rem;
+  }
+
+  .p-3 {
+    padding: 0.5rem;
+  }
+
+  .p-4 {
+    padding: 0.75rem;
+  }
+
+  .p-6 {
+    padding: 1rem;
+  }
+
+  .p-8 {
+    padding: 1.25rem;
+  }
+
+  /* Reduced padding for specific directions */
+  .px-4 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .py-4 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .py-6 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  /* Mobile drag and drop enhancements */
+  .mobile-drag-active {
+    position: relative;
+    z-index: 1000;
+    transform: scale(1.05) translateZ(0);
+  }
+  
+  .mobile-drag-active::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+    border-radius: 8px;
+    opacity: 0.6;
+    animation: mobile-drag-trail 1s ease-in-out infinite;
+    pointer-events: none;
+  }
+  
+  /* Mobile drop zone enhancements */
+  .mobile-drop-zone-active {
+    animation: zone-pulse 0.8s ease-in-out infinite;
+  }
+  
+  .mobile-drop-zone-active::after {
+    content: '🎯 DROP HERE!';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 0, 0.95);
+    color: #000;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    animation: mobile-drag-pulse 1s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Ultra-responsive mobile touch feedback */
+@media (hover: none) and (pointer: coarse) {
+  /* Immediate strong feedback for mobile touches */
+  .game-item-idle:active {
+    transform: scale(1.1) translateZ(0) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5) !important;
+    transition: transform 0.05s ease-out !important;
+  }
+
+  .game-zone-idle:active {
+    transform: scale(1.05) translateZ(0) !important;
+    transition: transform 0.05s ease-out !important;
+  }
+
+  /* Strong touch ripple for mobile */
+  .touch-manipulation::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.6);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 0.15s ease-out, height 0.15s ease-out, opacity 0.15s ease-out;
+    opacity: 0;
+  }
+
+  .touch-manipulation:active::after {
+    width: 120px;
+    height: 120px;
+    opacity: 1;
+  }
+}
+
+/* Mobile Landscape Specific Optimizations */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  /* Ultra compact mode for very short landscape screens */
+  .pixel-text {
+    font-size: 0.8em;
+  }
+  
+  /* Reduce padding in landscape */
+  .p-4 {
+    padding: 0.5rem;
+  }
+
+  .p-6 {
+    padding: 0.75rem;
+  }
+  
+  /* Compact margins */
+  .mb-4 {
+    margin-bottom: 0.75rem;
+  }
+  
+  .mb-6 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Enhanced mobile drag indicators for small screens */
+  .mobile-drag-indicator {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}
+
+/* Enhanced border utilities for mobile */
+.border-3 {
+  border-width: 3px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-5 {
+  border-width: 5px;
+}
+
+/* Scale utilities */
+.scale-102 {
+  transform: scale(1.02);
+}
+
+/* Enhanced mobile drag states */
+.mobile-dragging {
+  transform: scale(1.1) rotate(2deg) translateZ(0);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.mobile-drop-target {
+  background: linear-gradient(45deg, rgba(0, 255, 255, 0.2), rgba(255, 255, 0, 0.2));
+  animation: mobile-drag-glow 1s ease-in-out infinite;
+}

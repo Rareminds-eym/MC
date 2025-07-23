@@ -1,0 +1,5 @@
+# To enable Redux state persistence, install redux-persist:
+npm install redux-persist
+
+# If using TypeScript, also install types:
+npm install --save-dev @types/redux-persist
